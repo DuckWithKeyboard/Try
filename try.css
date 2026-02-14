@@ -64,14 +64,16 @@ body {
 
     box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
 }
+
 button {
     -webkit-tap-highlight-color: transparent;
     outline: none;
-    border: none;
+    touch-action: manipulation;
 }
 
 button:focus,
-button:focus-visible {
+button:focus-visible,
+button:active {
     outline: none;
     box-shadow: none;
 }
@@ -314,6 +316,7 @@ button:focus-visible {
         gap: 1rem;
     }
 }
+
 
 
 
