@@ -64,6 +64,15 @@ body {
 
     box-shadow: 0 0.625rem 1.875rem rgba(0, 0, 0, 0.3);
 }
+button {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
 
 .question-text {
     font-size: 2.125rem;
@@ -302,4 +311,5 @@ body {
         gap: 1rem;
     }
 }
+
 
