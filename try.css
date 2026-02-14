@@ -46,7 +46,6 @@ body {
     font-family: 'MilkyWalky';
     font-weight:bolder;
 }
-
 .button-group button {
     touch-action: manipulation;
 }
@@ -303,5 +302,4 @@ body {
         gap: 1rem;
     }
 }
-
 
