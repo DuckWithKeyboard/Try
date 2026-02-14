@@ -145,6 +145,12 @@ window.addEventListener("scroll", () => {
 
 });
 
+document.querySelectorAll("button, .dash-btn").forEach(el => {
+    el.addEventListener("click", () => {
+        el.blur();
+    });
+});
+
 
 
 
