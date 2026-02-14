@@ -120,25 +120,6 @@ body {
     100% { opacity: 0.6; }
 }
 
-/* ===== Remove Mobile Tap Highlight & Focus Ring ===== */
-
-button,
-.dash-btn {
-    -webkit-tap-highlight-color: transparent;
-    outline: none;
-    touch-action: manipulation;
-}
-
-/* Remove focus styles */
-button:focus,
-button:focus-visible,
-button:active,
-.dash-btn:focus,
-.dash-btn:focus-visible,
-.dash-btn:active {
-    outline: none;
-    box-shadow: none;
-}
 
 
 /* ===== Main box ===== */
@@ -194,6 +175,26 @@ button:active,
 }
 
 /* ===== Button ===== */
+
+/* ===== Remove Mobile Tap Highlight & Focus Ring ===== */
+
+button,
+.dash-btn {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    touch-action: manipulation;
+}
+
+/* Remove focus styles */
+button:focus,
+button:focus-visible,
+button:active,
+.dash-btn:focus,
+.dash-btn:focus-visible,
+.dash-btn:active {
+    outline: none;
+    box-shadow: none;
+}
 
 #nextBtn {
     margin-top: 15px;
@@ -376,4 +377,5 @@ button:active,
     border-radius: 40px;
     border: 1px solid rgba(255,255,255,0.3);
 }
+
 
