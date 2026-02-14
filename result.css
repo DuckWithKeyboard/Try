@@ -9,37 +9,43 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-/* ===== Remove Mobile Tap Highlight & Focus Ring ===== */
+/* ===== Remove Mobile Tap Highlight & Focus Ring (All Buttons + Links) ===== */
 
 button,
+a,
+#nextBtn,
 .dash-btn {
     -webkit-tap-highlight-color: transparent;
     outline: none;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    text-decoration: none;
     touch-action: manipulation;
 }
 
-/* Remove focus styles */
+/* Remove ALL focus visuals */
 button:focus,
 button:focus-visible,
 button:active,
+a:focus,
+a:focus-visible,
+a:active,
+#nextBtn:focus,
+#nextBtn:focus-visible,
+#nextBtn:active,
 .dash-btn:focus,
 .dash-btn:focus-visible,
 .dash-btn:active {
-    outline: none;
-    box-shadow: none;
+    outline: none !important;
+    box-shadow: none !important;
 }
 
-
-button:focus,
-button:focus-visible,
-button:active,
-.faq-question:focus,
-.faq-question:focus-visible,
-.faq-question:active {
-    outline: none;
-    box-shadow: none;
+/* Nuclear option (if needed) */
+*:focus {
+    outline: none !important;
 }
+
 
 body {
     min-height: 100vh;
@@ -390,6 +396,7 @@ body {
     border-radius: 40px;
     border: 1px solid rgba(255,255,255,0.3);
 }
+
 
 
 
