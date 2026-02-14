@@ -10,24 +10,33 @@
     box-sizing: border-box;
 }
 
-/* ===== Remove Mobile Tap Highlight & Focus ===== */
+/* ===== FULL Mobile Tap + Focus Removal ===== */
 
 button,
 .faq-question {
     -webkit-tap-highlight-color: transparent;
     outline: none;
-    touch-action: manipulation;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-clip: padding-box;
 }
 
+/* Remove all focus visuals */
 button:focus,
 button:focus-visible,
 button:active,
 .faq-question:focus,
 .faq-question:focus-visible,
 .faq-question:active {
-    outline: none;
-    box-shadow: none;
+    outline: none !important;
+    box-shadow: none !important;
 }
+
+*:focus {
+    outline: none !important;
+}
+
 
 
 body {
@@ -134,4 +143,5 @@ body {
         font-size: 1rem;
     }
 }
+
 
