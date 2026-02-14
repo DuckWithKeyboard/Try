@@ -47,6 +47,10 @@ body {
     font-weight:bolder;
 }
 
+.button-group button {
+    touch-action: manipulation;
+}
+
 .main-box {
     background: rgba(255, 161, 214, 0.9);
     padding: 1.5rem;
@@ -299,4 +303,5 @@ body {
         gap: 1rem;
     }
 }
+
 
