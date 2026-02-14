@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Overlay Box</title>
+    <link rel="stylesheet" href="try.css">
+</head>
+
+<body>
+
+    <h1 class="page-title">Hi Amishaaaaaa❤️</h1>
+
+    <div class="main-box">
+        <p class="question-text">Will you be my Valentine?🥺</p>
+
+        <div id="ques-image">
+            <img src="flat,750x,075,f-pad,750x1000,f8f8f8.jpg" alt="image">
+        </div>
+
+        <div class="button-group">
+            <button id="yes-btn">Yes</button>
+            <button id="no-btn">No</button>
+        </div>
+    </div>
+
+    <div id="popup">Please think again 👀</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const yesButton = document.getElementById("yes-btn");
+    const noButton = document.getElementById("no-btn");
+    const popup = document.getElementById("popup");
+
+    /* ===== YES BUTTON REDIRECT ===== */
+    yesButton.addEventListener("click", () => {
+
+    document.body.classList.add("fade-out");
+
+    setTimeout(() => {
+        window.location.href = "result.html";
+    }, 400); // match CSS duration
+});
+
+
+    /* ===== NO BUTTON LOGIC ===== */
+
+    let lastClickTime = 0;
+    let rapidClickCount = 0;
+
+    const rapidThreshold = 300;
+    const maxRapidClicks = 4;
+
+    const teasingMessages = [
+        "Hmm… the button is not responding 🤨",
+        "There’s no running 😌",
+        "Think again.",
+        "Maybe pressing it faster helps 👀",
+        "Is that all you’ve got?"
+    ];
+
+    function showPopup(message) {
+        popup.textContent = message;
+        popup.classList.add("show");
+
+        setTimeout(() => {
+            popup.classList.remove("show");
+        }, 2000);
+    }
+
+    noButton.addEventListener("click", () => {
+
+        if (noButton.classList.contains("disabled")) return;
+
+        const currentTime = Date.now();
+        const timeDiff = currentTime - lastClickTime;
+        lastClickTime = currentTime;
+
+        if (timeDiff < rapidThreshold) {
+            rapidClickCount++;
+        } else {
+            rapidClickCount = 0;
+        }
+
+        if (rapidClickCount >= maxRapidClicks) {
+
+            showPopup("Uh oh… the button broke 💀");
+
+            noButton.classList.add("disabled");
+            noButton.disabled = true;
+
+            return;
+        }
+
+        const randomMessage =
+            teasingMessages[Math.floor(Math.random() * teasingMessages.length)];
+
+        showPopup(randomMessage);
+    });
+
+});
+</script>
+
+
+
+</body>
+</html>

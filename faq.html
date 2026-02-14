@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQs</title>
+    <link rel="stylesheet" href="faq.css">
+</head>
+<body>
+
+    <div class="faq-wrapper">
+
+        <div class="faq-container">
+
+            <h1>Frequently Asked Questions 💭</h1>
+
+            <div class="faq-item">
+                <button class="faq-question">Who is the prettiest girl?</button>
+                <div class="faq-answer">
+                    Its of course Amisha Sinhaaa, my girlfriend🫶.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Do I love you?</button>
+                <div class="faq-answer">
+                    Of course I do, my love. You're the most beautiful girl in the world.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is this overdramatic?</button>
+                <div class="faq-answer">
+                    Yawwww Totes. But that’s the point.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Was this made with love?</button>
+                <div class="faq-answer">
+                    Obviously. Why else would it exist?
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+<script>
+document.querySelectorAll(".faq-question").forEach(btn => {
+
+    btn.addEventListener("click", () => {
+
+        const currentItem = btn.parentElement;
+        const allItems = document.querySelectorAll(".faq-item");
+
+        // Close all other FAQ items
+        allItems.forEach(item => {
+            if (item !== currentItem) {
+                item.classList.remove("active");
+            }
+        });
+
+        // Toggle current one
+        currentItem.classList.toggle("active");
+    });
+
+});
+</script>
+
+
+</body>
+</html>
