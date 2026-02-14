@@ -10,6 +10,26 @@
     box-sizing: border-box;
 }
 
+/* ===== Remove Mobile Tap Highlight & Focus ===== */
+
+button,
+.faq-question {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    touch-action: manipulation;
+}
+
+button:focus,
+button:focus-visible,
+button:active,
+.faq-question:focus,
+.faq-question:focus-visible,
+.faq-question:active {
+    outline: none;
+    box-shadow: none;
+}
+
+
 body {
     min-height: 100vh;
     background-image: url("backgrounds/bg\ \(3\).jpg");
@@ -114,3 +134,4 @@ body {
         font-size: 1rem;
     }
 }
+
